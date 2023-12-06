@@ -40,10 +40,8 @@ function initMultiStepForm() {
                 case "SomeWhat Satisfied":
                   // Proceed as normal
                   inputsValid = validateInputs(this);
-
-                  //Insert your link where https://www.amazon.com/ is
-                  next.setAttribute("value", "https://www.amazon.com/")
-                  submitBtn.setAttribute('value', 'CLICK TO POST A REVIEW ON AMAZON')
+                  
+                  submitBtn.setAttribute('value', 'CLICK TO POST A REVIEW ON AMAZON');
     
                   if (inputsValid) {
                     slidePage.style.marginLeft = `-${(100 / stepsNumber) * current}%`;
@@ -124,10 +122,25 @@ function initMultiStepForm() {
       progressCheck[current - 1].classList.add("active");
       progressText[current - 1].classList.add("active");
       current += 1;
+
+      
+
       const selectedRadioValue = document.querySelector('input[name="satisfaction"]:checked').value; // Moved the variable definition inside the function
       switch (selectedRadioValue) {
           case "Very Satisfied":
           case "SomeWhat Satisfied":
+
+          // Add the links to the products here
+
+          const links = {
+            'Resistance-Band-Orange-Set': 'https://www.amazon.com/review/create-review/error?ie=UTF8&channel=glance-detail&asin=B0BW7PLSW1',
+            'Resistance-Band-Military-Green-Set': 'https://www.amazon.com/review/create-review/error?ie=UTF8&channel=glance-detail&asin=B0CHRNDZ29',
+            'Resistance-Band-Military-Black-&-White-Set': 'https://www.amazon.com/review/create-review/error?ie=UTF8&channel=glance-detail&asin=B0CLMFSSPP'
+          };
+
+          const product = document.querySelector('select[name="product"]').value; // Moved the variable definition inside the function
+          const link = links[product];
+            next.setAttribute("value", `${link}`);
               alert("The Amazon gift card will be sent to the provided email address. Thank you for your feedback!");
               // window.open.href = ""; // Redirect to Google after showing the alert
               break;

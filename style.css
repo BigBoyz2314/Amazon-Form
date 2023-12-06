@@ -56,6 +56,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+#page3 {
+    margin: 10px 0;
+}
 .form-outer form .page {
     width: calc(100% / var(--stepNumber));
     transition: margin-left 0.3s ease-in-out;
@@ -248,6 +251,20 @@ form .page .btns button.next {
         align-items: center;
         justify-content: center;
     }
+    .submit {
+        width: 95%;
+        height: calc(100% + 5px);
+        border: none;
+        background: var(--secondary);
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px !important;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: 0.5s ease;
+    }
 }
 @media screen and (max-width: 490px) {
     :root {
@@ -256,6 +273,24 @@ form .page .btns button.next {
     .container {
         box-sizing: border-box;
         border-radius: 0;
+    }
+    .submit {
+        width: 90% !important;
+        height: calc(100% + 5px);
+        border: none;
+        background: var(--secondary);
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px !important;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: 0.5s ease;
+    }
+    .form-outer form #page3 {
+        width: calc(100% / var(--stepNumber)) !important;
+        transition: margin-left 0.3s ease-in-out;
     }
 }
 
@@ -285,7 +320,7 @@ textarea{
     width: 95%;
     border: 1px solid var(--inputBorderColor);
     border-radius: 5px;
-    padding-left: 15px;
+    /* padding-left: 15px; */
     margin: 0 1px;
     font-size: 18px;
     transition: border-color 150ms ease;
