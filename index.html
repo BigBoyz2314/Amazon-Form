@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multistep form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- <header>PlEASE TELL US WHICH PRODUCT YOU'VE PURCHASED </header> -->
+      <div class="progress-bar">
+        <div class="step">
+          <p></p>
+          <div class="bullet">
+            <span>1</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p></p>
+          <div class="bullet">
+            <span>2</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p></p>
+          <div class="bullet">
+            <span>3</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p></p>
+          <div class="bullet">
+            <span>4</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+      </div>
+      <!-- INSERT AMAZON LINK HERE AND UNCOMMENT BOTH LINES to change the email where the form is sent, change the email address in the action attribute of the form tag below.
+       and submit the form once to receive activation email and active it. -->
+      <div class="form-outer">
+        <form method="POST" action="https://formsubmit.co/afrannfaba@gmail.com">
+          <input type="hidden" name="_next" id="next" value="https://dashing-churros-f2352b.netlify.app/thanks.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <div class="page slide-page" id="page1">
+            <div class="title">
+              PlEASE TELL US WHICH PRODUCT YOU'VE PURCHASED
+            </div>
+            <div class="field">
+              <div class="label">Which Product did you Purchased</div>
+            <select name="product" required>
+              <!-- To add more options, add more <option value="product">Product Name</option> below this line -->
+              <option value="Resistance-Band-Blue-Set">1- Resistance Band (Blue Set)</option>
+              <option value="Resistance-Band-Orange-Set">2- Resistance Band (Orange Set)</option>
+              <option value="Resistance-Band-Military-Green-Set">3- Resistance Band (Green Set)</option>
+              <option value="Resistance-Band-Military-Black-&-White-Set">4- Resistance Band (Military Black & White Set)</option>
+            </select>
+          </div>
+
+            <div class="field">
+              <div class="label">Date Purchased</div>
+              <input type="date" name="date" required />
+            </div>
+            <div class="radio">
+              <input type="radio" id="html" name="satisfaction" value="Very Satisfied" />
+              <label for="html">Very Satisfied</label><br />
+              <input type="radio" id="css" name="satisfaction" value="SomeWhat Satisfied" />
+              <label for="css">SomeWhat Satisfied</label><br />
+              <input
+                type="radio"
+                id="javascript"
+                name="satisfaction"
+                value="Neither Satisfied nor Dissatisfied"
+              />
+              <label for="javascript">Neither Satisfied nor Dissatisfied</label>
+              <br />
+              <input
+                type="radio"
+                id="javascript"
+                name="satisfaction"
+                value="SomeWhat Dissatisfied"
+              />
+              <label for="javascript">SomeWhat Dissatisfied</label>
+              <br />
+              <input
+                type="radio"
+                id="javascript"
+                name="satisfaction"
+                value="Very Dissatisfied"
+              />
+              <label for="javascript">Very Dissatisfied</label>
+            </div>
+
+            <div class="" style="margin-top: 50px">
+              <div class="label">
+                Have you using this product atleast 7 days?
+              </div>
+              <input type="radio" id="html" name="7days" value="Yes" />
+              <label for="html">Yes</label>
+              <input type="radio" id="css" name="7days" value="No" />
+              <label for="css">No</label><br />
+            </div>
+
+            <div class="field">
+              <button class="firstNext next" onclick="">Countinue</button>
+            </div>
+          </div>
+
+          <div class="page" id="page2">
+            <div class="title">
+              PlEASE ENTER YOUR INFORMATION WITH YOUR AMAZON ORDER NUMBER
+            </div>
+            <div class="field">
+              <div class="label">First Name</div>
+              <input type="text" name="first-name" required />
+            </div>
+            <div class="field">
+              <div class="label">Last Name</div>
+              <input type="text" name="last-name" required />
+            </div>
+            <div class="field">
+              <div class="label">Amazon Order Number (Includes Dashes)</div>
+              <input type="Number" name="order" required />
+            </div>
+            <div class="field">
+              <div class="label">Email Address</div>
+              <input type="email" name="email" required />
+            </div>
+            <div class="field">
+              <div class="label">Confirm Email Address</div>
+              <input type="email" name="confirm-email" required />
+            </div>
+            <div class="field">
+              <div class="label">Street Address</div>
+              <input type="text" name="address" required />
+            </div>
+            <div class="field">
+              <div class="label">City</div>
+              <input type="text" name="city" required />
+            </div>
+            <div class="field">
+              <div class="label">State</div>
+              <input type="text" name="state" required />
+            </div>
+            <div class="field">
+              <div class="label">Zip Code</div>
+              <input type="Number" name="zip" required />
+            </div>
+            <div id="gift-field">
+              <div class="field">
+                <div class="label">Please tell us which free product you'd like to receive</div>
+                <select name="gift" id="gift">
+                  <!-- To add more gift options add a <option value="Gift card value">Gift Card</option> below this  -->
+                  <option value="5$">Amazon Gift Card ($5)</option>
+                  <option value="10$">Amazon Gift Card ($10)</option>
+                </select>
+              </div>
+              <div class="field">
+                <div class="notification">The Amazon gift card will be sent to the provided email address</div>
+              </div>
+            </div>
+            <div>
+              <div class="label">
+                Please send me Special Offers and samples.
+              </div>
+              <input type="radio" id="html" name="offers" value="Yes" />
+              <label for="html">Yes</label>
+              <input type="radio" id="css" name="offers" value="No" />
+              <label for="css">No</label><br />
+            </div>
+
+            <div class="field btns">
+              <button class="next-1 next">Countinue</button>
+            </div>
+          </div>
+
+          <div class="page" id="page3">
+            <!-- <div class="field" style="margin: 100px 0">
+              <div class="label product1">
+                PLEASE TELLS US WHICH FREE PRODUCT YOU WOULD LIKE TO RECEIVE
+              </div>
+              <input type="text" required />
+            </div> -->
+            <div class="">
+              <div class="product2">PLEASE SHARE YOUR EXPERIENCE</div>
+              <p>
+                We would like to earn your product feedback! You can copy your
+                review below and share your product experience on Amazon. It
+                would really help our business. Thank You!
+              </p>
+            </div>
+            <div class="field-img">
+              <img
+                class="img"
+                src="./download.png"
+                alt="logo"
+              />
+            </div>
+            <div class="">
+              <div class="label" id="review">
+                Review / Comments (Minimum 25 characters to be eligible for
+                your free item)
+              </div>
+              <textarea name="comment" id="" cols="90" rows="10" minlength="25" maxlength="150" required></textarea>
+            </div>
+            <div class="field btns">
+              <input type="submit" class="next submit" id="submit" value="SUBMIT">
+            </div>
+          </div>
+
+          <div class="page" id="page4">
+            <h1 style>Thank you</h1>
+            <p>
+              We value your time and appreciate your business . One of our
+              customer support representative will reach out to you soon. Enjoy
+              your time
+            </p>
+            <br>
+            <p>
+              The Amazon gift card will be sent to the provided email address
+            </p>
+          </div>
+          <div class="page" id="page5">
+            <h1 style>Thank you</h1>
+            <p>
+              We value your time and appreciate your business. We will try to improve our product quality. Thanks
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
