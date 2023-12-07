@@ -78,7 +78,8 @@ body {
 
 .field-img {
     width: var(--containerWidth);
-    height: 150px;
+    /* height: 150px; */
+    margin: 25px 0;
 }
 .radio {
     margin-top: 30px;

@@ -40,19 +40,20 @@ function initMultiStepForm() {
                 case "SomeWhat Satisfied":
                   // Proceed as normal
                   inputsValid = validateInputs(this);
+                  console.log(1);
                   
                   submitBtn.setAttribute('value', 'CLICK TO POST A REVIEW ON AMAZON');
     
                   if (inputsValid) {
                     slidePage.style.marginLeft = `-${(100 / stepsNumber) * current}%`;
                     bullet[current - 1].classList.add("active");
-                    progressCheck[current - 1].classList.add("active");
+                    // progressCheck[current - 1].classList.add("active");
                     progressText[current - 1].classList.add("active");
                     current += 1;
     
                     if (current === lastStep) {
                       bullet[lastStep - 1].classList.add("active");
-                      progressCheck[lastStep - 1].classList.add("active");
+                      // progressCheck[lastStep - 1].classList.add("active");
                       progressText[lastStep - 1].classList.add("active");
                     }
                   }
@@ -60,13 +61,14 @@ function initMultiStepForm() {
     
                 default:
                   inputsValid = validateInputs(this);
+                  console.log(2);
     
                   if (inputsValid) {
                     slidePage.style.marginLeft = `-${(100 / stepsNumber) * current}%`;
                     bullet[current - 1].classList.add("active");
-                    progressCheck[current - 1].classList.add("active");
+                    // progressCheck[current - 1].classList.add("active");
                     progressText[current - 1].classList.add("active");
-                    giftField.remove();
+                    // giftField.remove();
                     review.innerHTML = "Review / Comments (Minimum 25 characters)";
                     current += 1;
 
@@ -88,13 +90,13 @@ function initMultiStepForm() {
               if (inputsValid) {
                 slidePage.style.marginLeft = `-${(100 / stepsNumber) * current}%`;
                 bullet[current - 1].classList.add("active");
-                progressCheck[current - 1].classList.add("active");
+                // progressCheck[current - 1].classList.add("active");
                 progressText[current - 1].classList.add("active");
                 current += 1;
     
                 if (current === lastStep) {
                   bullet[lastStep - 1].classList.add("active");
-                  progressCheck[lastStep - 1].classList.add("active");
+                  // progressCheck[lastStep - 1].classList.add("active");
                   progressText[lastStep - 1].classList.add("active");
                 }
               }
@@ -111,7 +113,7 @@ function initMultiStepForm() {
                 (100 / stepsNumber) * (current - 2)
             }%`;
             bullet[current - 2].classList.remove("active");
-            progressCheck[current - 2].classList.remove("active");
+            // progressCheck[current - 2].classList.remove("active");
             progressText[current - 2].classList.remove("active");
             current -= 1;
         });
@@ -119,7 +121,7 @@ function initMultiStepForm() {
 
     submitBtn.addEventListener("click", function () {
       bullet[current - 1].classList.add("active");
-      progressCheck[current - 1].classList.add("active");
+      // progressCheck[current - 1].classList.add("active");
       progressText[current - 1].classList.add("active");
       current += 1;
 
