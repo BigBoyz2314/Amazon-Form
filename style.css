@@ -344,6 +344,15 @@ form .page .btns button.next {
     .amazon {
         margin: 25px 0 50px 0 !important;
     }
+    .product2{
+        display: block;
+        font-size: 20px !important;
+        text-align: center !important;
+        font-weight: 900 !important;
+    }
+    .product2 p {
+        text-align: justify !important;
+    }
 }
 
 .product2{
