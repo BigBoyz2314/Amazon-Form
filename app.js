@@ -144,7 +144,7 @@ function initMultiStepForm() {
           const link = links[product];
             next.setAttribute("value", `${link}`);
               alert("The Amazon gift card will be sent to the provided email address. Thank you for your feedback!");
-              // window.open.href = ""; // Redirect to Google after showing the alert
+              window.open.href = `${link}`; // Redirect to Google after showing the alert
               break;
           default:
               alert("Thank you for your feedback!");
