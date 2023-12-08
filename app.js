@@ -158,7 +158,7 @@ function initMultiStepForm() {
           const product = document.querySelector('select[name="product"]').value; // Moved the variable definition inside the function
           const link = links[product];
             next.setAttribute("value", `${link}`);
-              alert("The Amazon gift card will be sent to the provided email address. Thank you for your feedback!");
+              // alert("The Amazon gift card will be sent to the provided email address. Thank you for your feedback!");
               window.open.href = `${link}`; // Redirect to Google after showing the alert
               break;
           default:
