@@ -353,6 +353,9 @@ form .page .btns button.next {
     .product2 p {
         text-align: justify !important;
     }
+    .dp {
+        margin-top: 45px !important;
+    }
 }
 
 .product2{
