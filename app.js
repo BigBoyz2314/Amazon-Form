@@ -120,9 +120,9 @@ function initMultiStepForm() {
     }
 
     submitBtn.addEventListener("click", function () {
-      bullet[current - 1].classList.add("active");
+      // bullet[current - 1].classList.add("active");
       // progressCheck[current - 1].classList.add("active");
-      progressText[current - 1].classList.add("active");
+      // progressText[current - 1].classList.add("active");
       current += 1;
 
       
