@@ -13,6 +13,7 @@ function initMultiStepForm() {
     const pages = document.querySelectorAll(".page");
     const nextButtons = document.querySelectorAll(".next");
     const prevButtons = document.querySelectorAll(".prev");
+    const linka = document.querySelector("#link");
     const stepsNumber = pages.length;
     const lastStep = stepsNumber; // Store the last step number
 
@@ -41,6 +42,20 @@ function initMultiStepForm() {
                   // Proceed as normal
                   inputsValid = validateInputs(this);
                   console.log(1);
+
+                  // Add the links to the products here
+
+                  const links = {
+                    'Resistance-Band-Orange-Set': 'https://www.amazon.com/review/create-review/error?ie=UTF8&channel=glance-detail&asin=B0BW7PLSW1',
+                    'Resistance-Band-Military-Green-Set': 'https://www.amazon.com/review/create-review/error?ie=UTF8&channel=glance-detail&asin=B0CHRNDZ29',
+                    'Resistance-Band-Military-Black-&-White-Set': 'https://www.amazon.com/review/create-review/error?ie=UTF8&channel=glance-detail&asin=B0CLMFSSPP'
+                  };
+
+                  const product = document.querySelector('select[name="product"]').value; // Moved the variable definition inside the function
+
+                  const link = links[product];
+
+                  linka.setAttribute("href", `${link}`);
                   
                   submitBtn.setAttribute('value', 'CLICK TO POST A REVIEW ON AMAZON');
     
