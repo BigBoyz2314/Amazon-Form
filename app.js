@@ -55,7 +55,7 @@ function initMultiStepForm() {
 
                   const link = links[product];
 
-                  next.setAttribute("href", `${link}`);
+                  next.setAttribute("value", `${link}`);
                   
                   submitBtn.setAttribute('value', 'CLICK TO POST A REVIEW ON AMAZON');
     
