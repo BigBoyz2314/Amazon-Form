@@ -17,6 +17,11 @@ function initMultiStepForm() {
     const stepsNumber = pages.length;
     const lastStep = stepsNumber; // Store the last step number
 
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
     if (progressNumber !== stepsNumber) {
         console.warn(
             "Error, the number of steps in the progress bar does not match the number of pages"
@@ -30,6 +35,8 @@ function initMultiStepForm() {
     for (let i = 0; i < nextButtons.length-1; i++) {
         nextButtons[i].addEventListener("click", function (event) {
           event.preventDefault();
+
+          topFunction();
     
           // Get the selected radio value
           const selectedRadioValue = document.querySelector('input[name="satisfaction"]:checked').value;
@@ -73,6 +80,7 @@ function initMultiStepForm() {
                     }
                   }
                   break;
+
     
                 default:
                   inputsValid = validateInputs(this);
@@ -169,11 +177,16 @@ function initMultiStepForm() {
 
     function validateInputs(ths) {
         let inputsValid = true;
+        let email = document.getElementById("email");
+        let conemail = document.getElementById("confirm-email");
 
         const inputs =
             ths.parentElement.parentElement.querySelectorAll("input");
         for (let i = 0; i < inputs.length; i++) {
             const valid = inputs[i].checkValidity();
+            
+
+            
             if (!valid) {
                 inputsValid = false;
                 inputs[i].classList.add("invalid-input");
@@ -181,6 +194,14 @@ function initMultiStepForm() {
                 inputs[i].classList.remove("invalid-input");
             }
         }
+        if (conemail != "") {
+          if (email.value != conemail.value) {
+            inputsValid = false;
+            conemail.classList.add("invalid-input");
+        } else {
+            conemail.classList.remove("invalid-input");
+        }
         return inputsValid;
     }
+  }
 }
