@@ -18,6 +18,7 @@ function initMultiStepForm() {
     const lastStep = stepsNumber; // Store the last step number
 
     function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       window.parent.postMessage('scrollToTop', 'https://freeafrann.com/');
