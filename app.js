@@ -55,9 +55,9 @@ function initMultiStepForm() {
                   // Add the links to the products here
 
                   const links = {
-                    'Resistance-Band-Orange-Set': 'https://www.amazon.com/review/create-review/error?ie=UTF8&channel=glance-detail&asin=B0BW7PLSW1',
-                    'Resistance-Band-Military-Green-Set': 'https://www.amazon.com/review/create-review/error?ie=UTF8&channel=glance-detail&asin=B0CHRNDZ29',
-                    'Resistance-Band-Military-Black-&-White-Set': 'https://www.amazon.com/review/create-review/error?ie=UTF8&channel=glance-detail&asin=B0CLMFSSPP'
+                    'Resistance-Band-Orange-Set': 'https://www.amazon.com/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0CLMFSSPP',
+                    'Resistance-Band-Military-Green-Set': 'https://www.amazon.com/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0CLMFSSPP',
+                    'Resistance-Band-Military-Black-&-White-Set': 'https://www.amazon.com/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0CHRNDZ29'
                   };
 
                   const product = document.querySelector('select[name="product"]').value; // Moved the variable definition inside the function
@@ -160,9 +160,9 @@ function initMultiStepForm() {
           // Add the links to the products here
 
           const links = {
-            'Resistance-Band-Orange-Set': 'https://www.amazon.com/review/create-review/error?ie=UTF8&channel=glance-detail&asin=B0BW7PLSW1',
-            'Resistance-Band-Military-Green-Set': 'https://www.amazon.com/review/create-review/error?ie=UTF8&channel=glance-detail&asin=B0CHRNDZ29',
-            'Resistance-Band-Military-Black-&-White-Set': 'https://www.amazon.com/review/create-review/error?ie=UTF8&channel=glance-detail&asin=B0CLMFSSPP'
+            'Resistance-Band-Orange-Set': 'https://www.amazon.com/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0CLMFSSPP',
+            'Resistance-Band-Military-Green-Set': 'https://www.amazon.com/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0CLMFSSPP',
+            'Resistance-Band-Military-Black-&-White-Set': 'https://www.amazon.com/review/create-review/?ie=UTF8&channel=glance-detail&asin=B0CHRNDZ29'
           };
 
           const product = document.querySelector('select[name="product"]').value; // Moved the variable definition inside the function
